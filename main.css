@@ -141,7 +141,7 @@ margin-right: 0;
 }
 
 .services-button::before {
-content: url(/imges/downArrows.svg);
+content: url(./imges/downArrows.svg);
 margin-right: 16px;
 }
 
