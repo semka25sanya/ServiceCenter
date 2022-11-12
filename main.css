@@ -3,35 +3,35 @@
   font-weight: normal;
   font-style: normal;
 
-  src: url('/fonts/TTLakes/TTLakes-Regular.eot') format('eot'),
-  url("/fonts/TTLakes/TTLakes-Regular.ttf") format('truetype'),
-  url("/fonts/TTLakes/TTLakes-Regular.woff") format('woff');
+  src: url('fonts/TTLakes/TTLakes-Regular.eot') format('eot'),
+  url("fonts/TTLakes/TTLakes-Regular.ttf") format('truetype'),
+  url("fonts/TTLakes/TTLakes-Regular.woff") format('woff');
 }
 
 @font-face {
   font-family: "TTLakes Bold" ;
   font-weight: bold;
   font-style: normal;
-  src: url('/fonts/TTLakes/TTLakes-Bold.eot') format('eot'),
-  url("/fonts/TTLakes/TTLakes-Bold.ttf") format('truetype'),
-  url("/fonts/TTLakes/TTLakes-Bold.woff") format('woff');
+  src: url('fonts/TTLakes/TTLakes-Bold.eot') format('eot'),
+  url("fonts/TTLakes/TTLakes-Bold.ttf") format('truetype'),
+  url("fonts/TTLakes/TTLakes-Bold.woff") format('woff');
 }
 
 @font-face {
   font-family: "TTLakes Light" ;
   font-weight: 300;
   font-style: normal;
-  src: url('/fonts/TTLakes/TTLakes-Light.eot') format('eot'),
-  url("/fonts/TTLakes/TTLakes-Light.ttf") format('truetype'),
-  url("/fonts/TTLakes/TTLakes-Light.woff") format('woff');
+  src: url('fonts/TTLakes/TTLakes-Light.eot') format('eot'),
+  url("fonts/TTLakes/TTLakes-Light.ttf") format('truetype'),
+  url("fonts/TTLakes/TTLakes-Light.woff") format('woff');
 }
 @font-face {
   font-family: "TTLakes Medium" ;
   font-weight: normal;
   font-style: normal;
-  src: url('/fonts/TTLakes/TTLakes-Medium.eot') format('eot'),
-  url("/fonts/TTLakes/TTLakes-Medium.ttf") format('truetype'),
-  url("/fonts/TTLakes/TTLakes-Medium.woff") format('woff');
+  src: url('fonts/TTLakes/TTLakes-Medium.eot') format('eot'),
+  url("fonts/TTLakes/TTLakes-Medium.ttf") format('truetype'),
+  url("fonts/TTLakes/TTLakes-Medium.woff") format('woff');
 }
 *{
   margin: 0;
@@ -44,8 +44,9 @@ body {
 font-family: 'TTLakes', sans-serif;
 background-color: #F8F8F8;
 font-size: 16px;
+max-width: 1200px;
 }
-.main{
+.wrapper{
   margin: 0 auto;
   max-width: 1200px;
 }
