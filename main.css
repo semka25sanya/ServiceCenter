@@ -45,7 +45,10 @@ font-family: 'TTLakes', sans-serif;
 background-color: #F8F8F8;
 font-size: 16px;
 }
-
+.main{
+  margin: 0 auto;
+  max-width: 1200px;
+}
 .header-nav {
 display: flex;
 background-color: #fff;
@@ -76,7 +79,7 @@ margin-top: 10px;
 }
 .services-list {
 display: flex;
-overflow: hidden;
+overflow: scroll;
 list-style-type:none ;
 white-space: nowrap;
 margin-top:24px ;
