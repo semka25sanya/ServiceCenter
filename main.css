@@ -238,7 +238,7 @@ left:-24px;
     flex-wrap: wrap;    
     justify-content: space-between;
     }
-    header{
+    .services-header{
       display: none;
     }
     .services-nav-for-desktops{
