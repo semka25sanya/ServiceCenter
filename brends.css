@@ -1,0 +1,168 @@
+
+.brends-header {
+
+  display: flex;
+  height: 80px;
+  background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+  align-items: center;
+  padding-left: 24px;
+  margin-bottom: 16px;
+  margin:0 auto;
+}
+  
+.brends_title {
+
+font-family: 'TTLakes', sans-serif;
+color: #7E7E82;
+text-transform: uppercase;
+size:24px;
+line-height:24px;
+
+}
+
+.brends-list {
+  display: flex;
+  list-style-type:none ;
+  flex-wrap: wrap;
+  margin: 16px 24px;
+  display: none;
+  gap:16px 24px;
+  /* justify-content: space-between; */
+
+}
+
+.brends-item{
+width: 240px;
+height: 72px;
+background: #FFFFFF;
+border: 1px solid #EAEAEA;
+border-radius: 6px;
+/* 
+margin-bottom: 16px; */
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 16px;
+}
+
+.brends-button {
+  background-image: url(./imges/brends/go.svg);
+  width: 40px;
+  height: 40px;
+  background-color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    font:inherit;
+    font-family: "TTLakes Medium";
+    font-size: 16px;
+  }
+
+.button-brend__more{
+  background: none;
+  border: none;
+  cursor: pointer;
+  font:inherit;
+  font-family: "TTLakes Medium";
+  font-size: 16px;
+  margin-left: 44px;
+  display: none;
+  position: relative;
+ 
+
+}
+
+.button-brend__more::before{
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  position: absolute;
+  background-image: url(./imges/downArrows.svg) ;
+  background-repeat: no-repeat;
+  top: 5px;
+  left:-18px;
+  transform-origin: 5px 5px;
+
+}
+.button-brend__more-rotate::before{
+  content:'';
+
+  transform: rotate(180deg);
+ 
+
+}
+
+.swiper {
+
+  height: 120px;
+  align-items: center;
+  overflow: auto;
+  margin-top: 16px;
+ overflow: hidden;
+}
+
+ .swiper-slide {
+width: 240px;
+padding-left: 16px;
+} 
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+.swiper-pagination-bullet-active {
+background:#B5B6BC; 
+}  
+
+@media screen and (min-width:768px){
+.swiper{
+  display: none;
+
+}
+
+.brends-list {
+  /* display: block; */
+  display: flex;
+ height: 170px;
+
+  overflow: hidden;
+  transition-duration: 500ms;
+}
+
+.brends-list--full {
+  height: 350px;
+  overflow: visible;
+  transition-duration: 500ms;
+
+}
+.button-brend__more{
+  display: block;
+}
+.brends-item {
+  width: 224px;
+
+}
+}
+
+
+@media screen and (min-width:1200px){
+  .brends-list {
+max-width: 1200px;
+margin: 32px 24px;
+gap:16px 32px;
+  }
+  .brends-title{
+    margin-left: 32px;
+  }
+  .brends-list--full {
+    height: 250px;
+    overflow: visible;
+  }
+  .brends-item {
+    width: 240px;
+  /* margin-right: 32px; */
+  }
+
+  .button-brend__more{
+margin-left: 50px;
+  }
+}
