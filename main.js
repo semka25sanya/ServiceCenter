@@ -1,12 +1,13 @@
-let buttonMoreInformation = document.querySelector('.button-brend__more')
-let brensList = document.querySelector('.brends-list')
+const buttonMoreInformation = document.querySelector('.button-brend__more')
+const brendsList = document.querySelector('.brends-list')
 
 buttonMoreInformation.addEventListener('click', function(){
-  if (buttonMoreInformation.textContent == 'Показать все'){
-    buttonMoreInformation.textContent = 'Скрыть'  
-  } else {
-    buttonMoreInformation.textContent = 'Показать все'  
-  }
-  brensList.classList.toggle('brends-list--full')
+  brendsList.classList.toggle('brends-list--full')
   buttonMoreInformation.classList.toggle('button-brend__more-rotate')
+    if (brendsList.classList.contains('brends-list--full')){
+    buttonMoreInformation.textContent = 'Скрыть' 
+  } else {
+    buttonMoreInformation.textContent =  'Показать все'   
+  }
 })
+
