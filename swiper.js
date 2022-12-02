@@ -4,6 +4,8 @@ const swiperWrapper = document.querySelector('.swiper-wrapper')
 let swiper;
 function mobileSlider() {
 	if (window.innerWidth < 768 && slider.dataset.mobile == 'false') {
+    swiperWrapper.classList.add('swiper-wrapper')
+    swiperWrapper.classList.remove('brends-list')
     swiper = new Swiper(slider, {
       direction: 'horizontal',
       pagination: {
@@ -19,18 +21,18 @@ function mobileSlider() {
     });
     console.log('mobile')
     slider.dataset.mobile = 'true'
-   
+
   }
 
 if (window.innerWidth >= 768) {
-
-  console.log(window.innerWidth)
-  slider.dataset.mobile = 'false'
-  if (slider.classList.contains('swiper-container-initialized')) {
-    swiper.destroy();
-  }
   swiperWrapper.classList.remove('swiper-wrapper')
   swiperWrapper.classList.add('brends-list')
+  console.log(window.innerWidth)
+  slider.dataset.mobile = 'false'
+  if (slider.classList.contains('swiper-initialized')) {
+    swiper.destroy();
+  }
+
 }
 }
 
