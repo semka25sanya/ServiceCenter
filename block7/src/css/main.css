@@ -1,0 +1,428 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "TTLakes";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/TTLakes-Regular.eot") format("eot"), url("../fonts/TTLakes-Regular.ttf") format("truetype"), url("../fonts/TTLakes-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "TTLakes Bold";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/TTLakes-Bold.eot") format("eot"), url("../fonts/TTLakes-Bold.ttf") format("truetype"), url("../fonts/TTLakes-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "TTLakes Light";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/TTLakes-Light.eot") format("eot"), url("../fonts/TTLakes-Light.ttf") format("truetype"), url("../fonts/TTLakes-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "TTLakes Medium";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/TTLakes-Medium.eot") format("eot"), url("../fonts/TTLakes-Medium.ttf") format("truetype"), url("../fonts/TTLakes-Medium.woff") format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "TTLakes", sans-serif;
+  background-color: #F8F8F8;
+  font-size: 16px;
+  max-width: 1200px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 18px 16px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #D9FFF5;
+}
+
+.header-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo::after {
+  content: "";
+  background: #EAEAEA;
+  width: 2px;
+  height: 32px;
+
+  margin-left: 17px;
+  margin-top: 10px;
+}
+
+.services {
+  margin-bottom: 24px;
+}
+
+.services-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  list-style-type: none;
+  white-space: nowrap;
+  margin: 24px 16px;
+}
+
+.services-desc {
+  margin-top: 24px;
+  font-size: 14px;
+  font-family: "TTLakes Light";
+  margin: 0 16px;
+}
+
+.services-img {
+  width: 100%;
+  height: 100%;
+  margin-top: 15px;
+}
+
+.services-item {
+  padding: 8px;
+  color: #7E7E82;
+}
+
+.services-item__active {
+  background-color: #fff;
+  border: 1px solid #B8FFEC;
+  border-radius: 6px;
+}
+
+.services-button {
+  margin-top: 16px;
+}
+
+.services-title {
+  font-family: "TTLakes Bold", sans-serif;
+  font-size: 28px;
+  margin-top: 24px;
+}
+
+.services-title::before {
+  content: "";
+  background: #41F6D7;
+  width: 4px;
+  height: 45px;
+  /* position: absolute; */
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: inline-block;
+  margin-right: 16px;
+  vertical-align: middle;
+  margin-bottom: 5px;
+}
+
+.header-nav__item {
+  margin-right: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.header-nav__item:last-child {
+  margin-right: 0;
+}
+
+.services-nav-for-desktops__item {
+  border: none;
+  cursor: pointer;
+}
+
+.services-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-family: "TTLakes Medium";
+  font-size: 16px;
+}
+
+.services-button::before {
+  content: url(../img/downArrows.svg);
+  margin-right: 16px;
+}
+
+.header-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-right__one-side::after {
+  content: "";
+  background: #EAEAEA;
+  width: 2px;
+  height: 32px;
+
+  margin-left: 17px;
+  margin-right: 17px;
+  margin-top: 7px;
+}
+
+.services-desc_p2 {
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .header-right__one-side {
+    display: none;
+  }
+
+  .services-desc_p2 {
+    display: none;
+  }
+
+  .services-desc_p2__extra {
+    display: none;
+  }
+
+  .services-nav-for-desktops {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1120px) {
+  .logo::after {
+    content: "";
+    background: #EAEAEA;
+    width: 2px;
+    height: 32px;
+ 
+    margin-right: 16px;
+    margin-top: 10px;
+  }
+
+  .header-nav__item.burger {
+    margin-right: 0;
+  }
+
+  .services-img {
+
+    max-width: 360px;
+    max-height: 208px;
+    margin-top: 0;
+    border-radius: 7px;
+  }
+
+  .services-desc {
+
+    width: 45%;
+    margin: 0;
+  }
+
+  /* .services-title::before{
+  left:-24px;
+  } */
+  .services-nav-for-desktops {
+    display: none;
+  }
+
+  .services-desc_p2__extra {
+    display: none;
+  }
+
+  .services-bottom {
+    margin: 0 24px;
+  }
+}
+@media screen and (min-width: 1120px) {
+  .services-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .services-header {
+    display: none;
+  }
+
+  .services-nav-for-desktops {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .services-top-for-destops {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-right: 32px;
+  }
+
+  .services-nav-for-desktops__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-decoration: none;
+    color: #1B1C21;
+    font-family: "TTLakes Medium", sans-serif;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 32px;
+  }
+
+  .services-nav-for-desktops__item:last-child {
+    margin-right: 0;
+  }
+
+  .services-nav-for-desktops__img {
+    margin-left: 9px;
+  }
+
+  .services-title::before {
+    display: inline-block;
+  }
+
+  .services-desc {
+    margin: 0 34px;
+  }
+
+  .services-bottom {
+    padding: 0 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .services-img {
+    max-width: 532px;
+    max-height: 307px;
+    margin-top: 0;
+    border-radius: 7px;
+  }
+
+  .services-desc {
+    width: 45%;
+    margin: 0;
+  }
+
+  .services-title {
+    margin-top: 0;
+  }
+
+  .services-top-for-destops {
+    margin-top: 42px;
+  }
+}
+.header-nav__item.burger {
+  background: url(../img/burger.svg) no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.header-nav__item.call {
+  width: 40px;
+  height: 40px;
+  background: url(../img/call.svg) no-repeat;
+}
+
+.header-nav__item.chat {
+  background: url(../img/chat.svg) no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+/* header-right__one-side:nth-child(3) */
+.header-nav__item.profile {
+  background: url(../img/profile.svg) no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.header-nav__item.repair {
+  background: url(../img/repair.svg) no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.header-nav__item.checkstatus {
+  background: url(../img/checkstatus.svg) no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.services-nav-for-desktops__item.repair {
+  background: url(../img/repair.svg) no-repeat;
+  width: 40px;
+  height: 40px;
+  margin-right: 140px;
+}
+
+.services-nav-for-desktops__item.repair::after {
+  content: "Оставить заявку";
+  margin-left: -115px;
+}
+
+.services-nav-for-desktops__item.checkstatus {
+  background: url(../img/repair.svg) no-repeat;
+  width: 40px;
+  height: 40px;
+}
+
+.services-nav-for-desktops__item.checkstatus::after {
+  content: "Статус ремонта";
+  margin-left: -115px;
+}
+
+footer {
+  color: #7E7E82;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 147px;
+  padding: 16px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}

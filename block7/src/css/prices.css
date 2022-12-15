@@ -1,0 +1,31 @@
+.prices {
+  font-size: 14px;
+}
+.prices__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  background: -webkit-gradient(linear, right top, left top, from(#F8F8F8), color-stop(98.61%, #FFFFFF));
+  background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 24px;
+  margin-bottom: 16px;
+  margin: 0 auto;
+}
+.prices__desc {
+  color: #1B1C21;
+}
+.prices__offer {
+  font-size: 16px;
+  text-decoration: none;
+  color: #1B1C21;
+}
+.prices__offer::after {
+  content: "";
+  background-image: url(../img/arrowRight.svg);
+  width: 12px;
+  height: 6px;
+}

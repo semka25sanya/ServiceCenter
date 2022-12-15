@@ -4,12 +4,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.brends {
+  margin-bottom: 24px;
+}
 .brends-header {
 
   display: flex;
   height: 80px;
   background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+  
   align-items: center;
   padding-left: 24px;
   margin-bottom: 16px;
@@ -27,6 +30,7 @@ line-height:24px;
 }
 
 .brends-list {
+  overflow: hidden;
   display: flex;
   list-style-type:none ;
   flex-wrap: wrap;
@@ -56,7 +60,7 @@ padding: 0 16px;
   border-radius: 0;
 }
 .brends-button {
-  background-image: url(./imges/brends/go.svg);
+  background-image: url(../img/brends/go.svg);
   width: 40px;
   height: 40px;
   background-color: #FFFFFF;
@@ -90,7 +94,7 @@ padding: 0 16px;
   height: 24px;
   display: inline-block;
   position: absolute;
-  background-image: url(./imges/downArrows.svg) ;
+  background-image: url(../img/downArrows.svg) ;
   background-repeat: no-repeat;
   top: 5px;
   left:-18px;
@@ -138,6 +142,7 @@ display: none;
  height: 170px;
   overflow: hidden;
   transition-duration: 500ms;
+
 }
 
 .brends-list--full {
@@ -183,5 +188,11 @@ gap:16px 32px;
 
   .button-brend__more{
 margin-left: 50px;
+  }
+}
+
+@media screen and (min-width:1400px){
+  .brends-list--full {
+    height: 335px;
   }
 }

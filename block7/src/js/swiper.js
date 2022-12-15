@@ -1,0 +1,110 @@
+import Swiper, { Navigation, Pagination } from 'swiper';
+Swiper.use([Navigation, Pagination])
+
+const sliders = document.querySelectorAll('.swiper');
+const swiperWrappers = document.querySelectorAll('.swiper-wrapper')
+
+let swiper;
+function mobileSlider(slider) {
+    
+	if (window.innerWidth < 768 && slider.dataset.mobile == 'false') {
+    for (let swiperWrapper of swiperWrappers) {
+    swiperWrapper.classList.add('swiper-wrapper')
+    if (swiperWrapper.classList.contains("swiperOne")){
+      swiperWrapper.classList.remove('brends-list')
+    } else if(swiperWrapper.classList.contains("swiperTwo")) {
+      swiperWrapper.classList.remove('section-repair__list')
+    }
+    swiper = new Swiper(slider, {
+      direction: 'horizontal',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    
+      spaceBetween: 16,
+      centerSlides: true,
+      slidesPerView: 'auto',
+      slidesOffsetAfter: 40,
+      slidesOffsetBefore: 20,
+
+    //   breakpoints: {
+    //   768: {
+    //     slidesOffsetAfter: 0
+    //   }
+    // }
+    });
+    slider.dataset.mobile = 'true'
+  }
+  
+  }
+
+if (window.innerWidth >= 768 ) {
+  slider.dataset.mobile = 'false'
+
+
+
+    if (slider.classList.contains('swiper-initialized')) {
+      slider.classList.remove('swiper-initialized')
+      
+      swiper.destroy();
+ 
+    
+    }
+  
+
+  for (let swiperWrapper of swiperWrappers){
+    swiperWrapper.classList.remove('swiper-wrapper')
+
+  if (swiperWrapper.classList.contains("swiperOne")){
+    swiperWrapper.classList.add('brends-list')
+  } else if(swiperWrapper.classList.contains("swiperTwo")) {
+    swiperWrapper.classList.add('section-repair__list')
+  }
+}
+
+
+
+}
+
+}
+
+for (let elem of sliders){
+  mobileSlider(elem)
+}
+
+window.addEventListener('resize', function(){
+  for (let elem of sliders){
+ 
+    mobileSlider(elem)
+  }
+})
+
+
+
+
+
+
+
+
+// if (window.innerWidth < 768 && slider.dataset.mobile == 'false') {
+//   swiper = new Swiper(slider, {
+//     direction: 'horizontal',
+//     pagination: {
+//       el: '.swiper-pagination',
+//       clickable: true,
+//     },
+  
+//     spaceBetween: 16,
+//     centerSlides: true,
+//     slidesPerView: 'auto',
+//     slidesOffsetAfter: 40,
+//     slidesOffsetBefore: 20
+//   });
+//   slider.dataset.mobile = 'true'
+// console.log(innerWidth)
+// } else {
+//   slider.dataset.mobile = 'false'
+//   swiper.destroy();
+//   console.log('!!')
+// }

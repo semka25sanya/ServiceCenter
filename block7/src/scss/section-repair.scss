@@ -1,0 +1,53 @@
+.section-repair {
+  margin-bottom: 24px;
+  &__list {
+    max-width:1200px ;
+    display: flex;
+    list-style-type:none ;
+    flex-wrap: wrap;
+    gap:16px 24px;
+    justify-content: space-between;
+      padding: 24px;
+      overflow: hidden;
+      height: 197px;
+      transition-duration: 500ms;
+      transform: none;
+     &--full {
+      height: 380px;
+     }
+  }
+  &__item {
+    width: 240px;
+    height: 160px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    padding:16px;
+    display: flex;
+
+    @media screen and (min-width: 768px) {
+
+ width: 224px;
+    }
+
+  }
+  
+  &__button{
+    align-self: flex-end;
+    margin-left: auto;
+  }
+
+&__header{
+  display: flex;
+  height: 80px;
+  background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+  align-items: center;
+  padding-left: 24px;
+  margin-bottom: 16px;
+  margin:0 auto;
+}
+
+
+}
+
+
