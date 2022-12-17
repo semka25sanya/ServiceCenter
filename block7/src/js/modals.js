@@ -1,50 +1,46 @@
+const blur = document.querySelector('.blur')
+const modalCall = document.querySelector('.modal-call')
+const buttonsCall = document.querySelectorAll('.call')
 
-let btns = document.getElementsByClassName("myBtn")
-const buttonsClose = document.getElementsByClassName('button-close')
-const overlays = document.getElementsByClassName('modal-overlay')
-const burger = document.querySelector('.burger')
-const nav = document.querySelector('.overlay-for-section-navigation')
-const buttonCloseForNav = document.querySelector('.close')
-
-function buttonClick(event) {
-  let id = this.getAttribute('data-modal');
-   let modal = document.getElementById(id);
-   modal.style.display = 'block'
-}
-for (var i = 0; i < btns.length; i++) {
-   btns[i].onclick = buttonClick;
-}
-
-function buttonClose(event) {
-let elem = event.target.parentElement.parentElement.parentElement
-elem.style.display = 'none'
-}
-
-for (var i = 0; i < buttonsClose.length; i++) {
-  buttonsClose[i].onclick = buttonClose;
-}
-
-for (let overlay of overlays){
-  overlay.addEventListener('click', function(e){
-    e.target.style.display = 'none'
+for (let call of buttonsCall) {
+  call.addEventListener('click', function(){
+    modalCall.classList.add('show-modal');
+    blur.classList.add('blur-show')
   })
 }
 
-burger.addEventListener('click', function(){
-nav.style.display = 'block'
+const modalFeedback = document.querySelector('.modal-feedback')
+const buttonsChats = document.querySelectorAll('.chat')
+
+for (let chat of buttonsChats) {
+  chat.addEventListener('click', function(){
+    modalFeedback.classList.add('show-modal')
+    blur.classList.add('blur-show')
+  })
+}
+
+const buttonBurger = document.querySelector('.burger')
+const sectionNavigation = document.querySelector('.section-navigation')
+
+buttonBurger.addEventListener('click', function(){
+  sectionNavigation.classList.add('show-section-navigation')
+  blur.classList.add('blur-show')
 })
-nav.addEventListener('click', function(){
-  if (window.innerWidth < 1400 ){
-    nav.style.display = 'none'
-  }
 
+const closeButtons = document.querySelectorAll('.close')
+
+for (let closeButton of closeButtons){
+  closeButton.addEventListener('click', function(){
+    sectionNavigation.classList.remove('show-section-navigation')
+    modalFeedback.classList.remove('show-modal')
+    modalCall.classList.remove('show-modal')
+    blur.classList.remove('blur-show')
+  })
+}
+
+blur.addEventListener('click', function(){
+  sectionNavigation.classList.remove('show-section-navigation')
+  modalFeedback.classList.remove('show-modal')
+  modalCall.classList.remove('show-modal')
+  blur.classList.remove('blur-show')
 })
-buttonCloseForNav.addEventListener('click', function(e){
-nav.style.display = 'none'
-})
-
-
-
-// if (window.innerWidth >= 1400 ){
-// nav.style.display = 'block'
-// }

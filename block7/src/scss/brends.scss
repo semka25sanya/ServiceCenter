@@ -28,37 +28,39 @@ size:24px;
 line-height:24px;
 
 }
-
-.brends-list {
-  overflow: hidden;
-  display: flex;
-  list-style-type:none ;
-  flex-wrap: wrap;
-  margin: 16px 24px;
-  display: none;
-  gap:16px 24px;
-  justify-content: space-between;
+@media screen and (min-width:768px){
+  .brends-list {
+    overflow: hidden;
+    display: flex;
+    list-style-type:none ;
+    flex-wrap: wrap;
+    margin: 16px 24px;
+    display: none;
+    gap:16px 24px;
+    justify-content: space-between;
+  
+  }
+  
 
 }
-
 .brends-item{
-width: 240px;
-height: 72px;
-background: #FFFFFF;
-border: 1px solid #EAEAEA;
-border-radius: 6px;
-/* 
-margin-bottom: 16px; */
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 0 16px;
-}
-.brends-item--dopp{
-  background: transparent;
-  border: transparent;
-  border-radius: 0;
-}
+  width: 240px;
+  height: 72px;
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  /* 
+  margin-bottom: 16px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  }
+  .brends-item--dopp{
+    background: transparent;
+    border: transparent;
+    border-radius: 0;
+  }
 .brends-button {
   background-image: url(../img/brends/go.svg);
   width: 40px;
@@ -117,6 +119,10 @@ padding: 0 16px;
 }
 .swiper-wrapper {
   margin-bottom: 50px;
+  @media screen and (min-width:768px){
+    margin-bottom: 0;
+    width: auto;
+  }
 }
 
  .swiper-slide {
@@ -139,7 +145,7 @@ display: none;
 .brends-list {
   /* display: block; */
   display: flex;
- height: 170px;
+ height: 175px;
   overflow: hidden;
   transition-duration: 500ms;
 
@@ -149,6 +155,7 @@ display: none;
   height: 350px;
   overflow: visible;
   transition-duration: 500ms;
+  margin-bottom: 24px;
 }
 
 
@@ -168,7 +175,7 @@ display: none;
 
 
 
-@media screen and (min-width:1200px){
+@media screen and (min-width:1400px){
   .brends-list {
 max-width: 1200px;
 margin: 24px 32px;
@@ -187,6 +194,7 @@ gap:16px 32px;
   }
 
   .button-brend__more{
+    // display: none;
 margin-left: 50px;
   }
 }
@@ -194,5 +202,12 @@ margin-left: 50px;
 @media screen and (min-width:1400px){
   .brends-list--full {
     height: 335px;
+  }
+}
+
+@media screen and (min-width:1016px) {
+  .button-brend__more--for-repair-sec{
+    display: none;
+
   }
 }

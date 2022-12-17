@@ -1,28 +1,37 @@
 .modal-feedback {
 
-
+  position: fixed;
+  top: 0;
+ right: -10000px;
+ z-index: 3;
   // display: none;
 }
 .modal-call{
-  // display: none;
+  // display:none;
+  position: fixed;
+  top: 0;
+ right: -10000px;
+ z-index: 3;
 }
 .modal{
-&-overlay {
-   display: none;
-  position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background: rgba(255,255,255,0.8);
-    z-index: 10;
-}
+
+
+// &-overlay {
+//    display: none;
+//   position: fixed; 
+//     top: 0; 
+//     left: 0; 
+//     width: 100%; 
+//     height: 100%; 
+//     background: rgba(255,255,255,0.8);
+//     z-index: 10;
+// }
 &__main {
   margin-bottom: 75px;
 }
   &__wrapper {
     background-color: #FFFFFF;
-    position: absolute; // позиционируем само окно абсолютно, относительно фона
+    // position: absolute; // позиционируем само окно абсолютно, относительно фона
     left: 50%; 
 
 height: 100vh;
@@ -38,6 +47,7 @@ transition: all 0.3s ease-in-out;
   }
 &__header{
   height: 80px;
+  // margin-bottom:40px;
   @media screen and (min-width:768px){
     position: absolute;
     left: -65px;
@@ -110,8 +120,39 @@ color:  #B5B6BC;
 }
 @media screen and (min-width:768px){
   .modal-feedback, .modal-call {
+    width: 320px;
+  }
+  
+}
+
+@media screen and (min-width:1400px){
+  .modal-feedback, .modal-call {
     width: 440px;
   }
   
 }
 
+.show-modal {
+  right: 0;
+
+}
+
+.hide-modal {
+  right: -10000px;
+}
+
+.blur {
+  position: fixed;
+  width: 100vw; 
+  height: 100vh; 
+  background: rgba(255,255,255,0.8);
+  z-index: 2;
+  top: 0; 
+    left: 0; 
+    display: none;
+}
+
+.blur-show {
+
+  display: block;
+}

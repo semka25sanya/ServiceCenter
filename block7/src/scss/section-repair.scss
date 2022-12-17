@@ -1,7 +1,7 @@
-.section-repair {
-  margin-bottom: 24px;
-  &__list {
-    max-width:1200px ;
+
+  @media screen and (min-width:768px) {
+    .section-repair__list{
+    max-width:1140px ;
     display: flex;
     list-style-type:none ;
     flex-wrap: wrap;
@@ -9,13 +9,22 @@
     justify-content: space-between;
       padding: 24px;
       overflow: hidden;
-      height: 197px;
+      height: 150px;
       transition-duration: 500ms;
       transform: none;
      &--full {
       height: 380px;
      }
-  }
+
+}
+}
+
+
+
+.section-repair {
+  margin-bottom: 24px;
+width: 100vw;
+
   &__item {
     width: 240px;
     height: 160px;
