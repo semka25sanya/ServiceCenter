@@ -1255,5 +1255,17 @@ a {
   .aside-nav__phone {
     margin-bottom: 10px; } }
 
+@media screen and (max-width: 1200px) and (min-width: 769px) {
+  .aside-nav__li {
+    margin-bottom: 0; }
+  .aside-nav_ul {
+    height: 350px;
+    display: flex;
+    justify-content: space-between; }
+  .aside-nav {
+    margin-bottom: 30px; }
+    .aside-nav__phone {
+      margin-bottom: 10px; } }
+
 
 /*# sourceMappingURL=style.css.map*/
