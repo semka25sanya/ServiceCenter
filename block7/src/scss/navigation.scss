@@ -189,20 +189,21 @@ justify-content: space-between;
 }
 }
 
-// @media screen and (max-width:1200px) {
-//   .aside-nav_ul{
-//     height: 270px;
-//     display: flex;
-//     justify-content: space-between;
-//       }
-//       .aside-nav__li{
-//         margin-bottom: 0;
-//       }
-//   .aside-nav {
-//     margin-bottom: 30px;
+@media screen and (max-width:1200px) and (min-width:769px) {
+  .aside-nav__li{
+    margin-bottom: 0;
+  }
+  .aside-nav_ul{
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+      }
 
-//     &__phone{
-//       margin-bottom: 10px;
-//     }
-//   }
-// }
+  .aside-nav {
+    margin-bottom: 30px;
+
+    &__phone{
+      margin-bottom: 10px;
+    }
+  }
+}
