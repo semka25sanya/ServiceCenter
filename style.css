@@ -648,7 +648,7 @@ main {
 
 @media screen and (min-width: 1400px) {
   .wrapper-for-desktops {
-    width: 1520px;
+    width: 1440px;
     display: flex; }
   .wrapper-for-desktops--left {
     width: 320px; }
@@ -657,7 +657,7 @@ main {
     display: block;
     position: static; }
   .wrapper-for-desktops--right {
-    width: 1200px; } }
+    width: 1120px; } }
 
 * {
   margin: 0;
