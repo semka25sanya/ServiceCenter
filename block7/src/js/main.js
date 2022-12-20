@@ -2,9 +2,9 @@ const buttonMoreInformations = document.querySelectorAll('.button-brend__more')
 const brendsList = document.querySelector('.brends-list')
 const sectionRepairList = document.querySelector('.section-repair__list')
 
-for (let i =0;i<buttonMoreInformations.length;i++){
+for (let elem of buttonMoreInformations){
 
-  buttonMoreInformations[i].addEventListener('click', function(e){
+  elem.addEventListener('click', function(e){
   
     if (e.target.previousElementSibling.firstElementChild.classList.contains('brends-list')) {
       brendsList.classList.toggle('brends-list--full')
@@ -14,11 +14,11 @@ for (let i =0;i<buttonMoreInformations.length;i++){
     }
 
     if (brendsList.classList.contains('brends-list--full') || sectionRepairList.classList.contains('section-repair__list--full')){
-      buttonMoreInformations[i].textContent = 'Скрыть' 
+      elem.textContent = 'Скрыть' 
     } else {
-    buttonMoreInformations[i].textContent =  'Показать все'   
+    elem.textContent =  'Показать все'   
   }
-    buttonMoreInformations[i].classList.toggle('button-brend__more-rotate')
+   elem.classList.toggle('button-brend__more-rotate')
 
   })
 }

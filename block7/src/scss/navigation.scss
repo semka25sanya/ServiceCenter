@@ -44,7 +44,7 @@ height: 100%;
   }
 
 
-@media screen and (min-width:1400px){
+@media screen and (min-width:1440px){
 
 position: static;
 left:0;
@@ -82,7 +82,7 @@ transition-duration: 500ms;
 .aisde-nav__item.close{
 background-image: url(../img/close.svg);
 margin-right: 16px;
-@media screen and (min-width:1400px){
+@media screen and (min-width:1440px){
   display: none;
 }
 }
@@ -94,7 +94,7 @@ margin-right: 16px;
 display: flex;
 flex-direction: column;
 list-style-type:none ;
-@media screen and (min-width:1400px){
+@media screen and (min-width:1440px){
   margin-bottom: 250px;
 }
 

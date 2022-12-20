@@ -1,7 +1,7 @@
 
   @media screen and (min-width:768px) {
     .section-repair__list{
-    max-width:1140px ;
+    // max-width:1140px ;
     display: flex;
     list-style-type:none ;
     flex-wrap: wrap;
@@ -18,8 +18,18 @@
 
 }
 }
+@media screen and (min-width:1300px){
+  .section-repair__list{
+    max-width: 1155px;
+  }
 
+}
+@media screen and (min-width:1440px){
+  .section-repair__list{
+    max-width: 1065px;
+  }
 
+}
 
 .section-repair {
   margin-bottom: 24px;
